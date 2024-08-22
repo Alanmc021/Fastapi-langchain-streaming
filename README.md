@@ -13,5 +13,29 @@ This project is a real-time chat API built using FastAPI and LangChain, integrat
 ## Installation
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/fastapi-langchain-chat.git
+    ```bash
+    git clone https://github.com/yourusername/fastapi-langchain-chat.git
+    ```
+2. Navigate to the project directory:
+    ```bash
+    cd fastapi-langchain-chat
+    ```
+3. Create a virtual environment:
+    ```bash
+    python3 -m venv venv
+    source venv/bin/activate
+    ```
+4. Install the dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+5. Create a `.env` file in the root directory with your OpenAI API key:
+    ```plaintext
+    OPENAI_API_KEY=your-api-key-here
+    ```
+
+## Usage
+
+Start the FastAPI server:
+```bash
+uvicorn main:app --reload
