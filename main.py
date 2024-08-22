@@ -1,38 +1,3 @@
-# from fastapi import FastAPI
-# from fastapi.middleware.cors import CORSMiddleware 
-# from app.controllers import agent
-# from app.controllers import gerar_pecas_controller
-# from app.controllers import analizar_imagens_controller
-# from app.controllers import analizar_imagens
-# from app.controllers import stream_chat
-
-# app = FastAPI(
-#     title="LangChain Server",
-#     version="1.0",
-#     description="API server with multiple endpoints for legal document creation",
-# )
-
-# # Configuração do CORS
-# app.add_middleware(
-#     CORSMiddleware,
-#     allow_origins=["*"],  # Permite todas as origens; ajuste conforme necessário
-#     allow_credentials=True,
-#     allow_methods=["*"],  # Permite todos os métodos; ajuste conforme necessário
-#     allow_headers=["*"],  # Permite todos os cabeçalhos; ajuste conforme necessário
-
-# )
-
-# # Incluir as rotas de cada endpoint
-# app.include_router(agent.router) 
-# app.include_router(gerar_pecas_controller.router) 
-# app.include_router(analizar_imagens_controller.router) 
-# app.include_router(analizar_imagens.router) 
-# # app.include_router(stream_chat.router) 
-
-# if __name__ == "__main__":
-#     import uvicorn
-#     uvicorn.run(app, host="localhost", port=8000)
- 
 from fastapi import FastAPI
 from fastapi.responses import StreamingResponse, FileResponse
 from langchain_openai import ChatOpenAI
